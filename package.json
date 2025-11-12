@@ -4,8 +4,9 @@
   "main": "index.js",
   "scripts": {
             "build:css": "tailwindcss -i ./src/styles.css -o ./public/styles.css",
-            "copy:html": "cpy \"src/**/*.html\" public",
-            "build": "npm run build:css && npm run copy:html",    "test": "echo \"Error: no test specified\" && exit 1"
+                            "copy:html": "cpy \"src/**/*.html\" public",
+                            "copy:assets": "cpy \"src/assets/**/*.{mp4,png,jpg,jpeg,gif}\" public/",
+                            "build": "npm run build:css && npm run copy:html && npm run copy:assets",    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
