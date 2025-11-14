@@ -1,0 +1,219 @@
+<!-- ========================================================
+     SECCIONES PARA /sessions
+     - Credibilidad + Foto
+     - Testimonios/Reviews
+     - FAQ
+     Usar Tailwind CSS - Sin CSS extra
+     ======================================================== -->
+
+<!-- 1. SECCIÓN: CREDIBILIDAD + FOTO -->
+<section class="w-full py-20 px-6 bg-brand-dark border-t border-zinc-800">
+  <div class="max-w-4xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      
+      <!-- Foto -->
+      <div class="flex justify-center">
+        <div class="relative w-64 h-64 rounded-lg overflow-hidden border border-zinc-800 shadow-lg">
+          <img 
+            src="TU_FOTO_AQUI.jpg" 
+            alt="Napbak Music Producer" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
+      <!-- Credibilidad -->
+      <div class="text-left">
+        <h2 class="font-logo font-bold text-4xl text-white mb-2">Napbak Music</h2>
+        <p class="text-zinc-400 mb-6 text-lg">Productor Musical | 10+ años experiencia</p>
+        
+        <div class="space-y-4 mb-8">
+          <div class="flex items-start">
+            <span class="text-zinc-500 mr-4 text-xl">🎵</span>
+            <div>
+              <p class="text-white font-semibold">20K Oyentes Mensuales</p>
+              <p class="text-zinc-400 text-sm">En Spotify (y creciendo)</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <span class="text-zinc-500 mr-4 text-xl">🏆</span>
+            <div>
+              <p class="text-white font-semibold">+10 Años Producción Musical</p>
+              <p class="text-zinc-400 text-sm">Trabajando con artistas y marcas</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <span class="text-zinc-500 mr-4 text-xl">🤝</span>
+            <div>
+              <p class="text-white font-semibold">Colaboraciones Destacadas</p>
+              <p class="text-zinc-400 text-sm">Mangusx, Synthness Band, y más</p>
+            </div>
+          </div>
+        </div>
+        
+        <p class="text-zinc-300 leading-relaxed">
+          He pasado más de una década creando música para artistas, películas y marcas. 
+          Ahora ofrezco sesiones 1-on-1 para ayudarte a mejorar tu sonido, flujo de trabajo 
+          y alcanzar tus metas musicales.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. SECCIÓN: TESTIMONIOS/REVIEWS -->
+<section class="w-full py-20 px-6 bg-brand-dark border-t border-zinc-800">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="font-logo font-bold text-4xl text-white mb-4">Lo que dicen mis clientes</h2>
+      <p class="text-zinc-400 max-w-2xl mx-auto">
+        Productores que han transformado su música en mis sesiones
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Review 1 -->
+      <div class="border border-zinc-800 rounded-lg p-8 bg-zinc-950 hover:border-zinc-600 transition-colors duration-300">
+        <div class="flex items-center mb-4">
+          <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+        </div>
+        <p class="text-zinc-300 mb-6 italic">
+          "La sesión con Napbak fue transformadora. Aprendí técnicas de mezcla que había estado buscando durante meses. Su approach es directo, profesional y súper útil."
+        </p>
+        <div class="flex items-center">
+          <div class="w-10 h-10 rounded-full bg-zinc-800 mr-3"></div>
+          <div>
+            <p class="text-white font-semibold text-sm">Juan Pérez</p>
+            <p class="text-zinc-500 text-xs">Productor / Miami</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="border border-zinc-800 rounded-lg p-8 bg-zinc-950 hover:border-zinc-600 transition-colors duration-300">
+        <div class="flex items-center mb-4">
+          <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+        </div>
+        <p class="text-zinc-300 mb-6 italic">
+          "Recomiendo 100% las sesiones de Napbak. Me ayudó a optimizar mi workflow en FL Studio y ahora produzco el doble de rápido. Muy buen inversor."
+        </p>
+        <div class="flex items-center">
+          <div class="w-10 h-10 rounded-full bg-zinc-800 mr-3"></div>
+          <div>
+            <p class="text-white font-semibold text-sm">María Silva</p>
+            <p class="text-zinc-500 text-xs">Beatmaker / CDMX</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. SECCIÓN: FAQ (Acordeón) -->
+<section class="w-full py-20 px-6 bg-brand-dark border-t border-zinc-800">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="font-logo font-bold text-4xl text-white mb-4">Preguntas Frecuentes</h2>
+    </div>
+
+    <div class="space-y-4">
+      
+      <!-- FAQ 1 -->
+      <button 
+        onclick="toggleFAQ(this)" 
+        class="w-full flex justify-between items-center p-5 border border-zinc-800 rounded-lg text-zinc-300 hover:bg-zinc-900 hover:border-zinc-600 transition-colors duration-300 text-left"
+      >
+        <span class="font-semibold text-base">¿Qué necesito para la sesión?</span>
+        <svg class="h-5 w-5 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div class="hidden px-5 py-4 border border-t-0 border-zinc-800 rounded-b-lg text-zinc-400 text-sm bg-zinc-950">
+        Solo necesitas tener FL Studio instalado y un tema o idea para trabajar. Yo proveo los demás recursos, referencias y feedback especializado.
+      </div>
+
+      <!-- FAQ 2 -->
+      <button 
+        onclick="toggleFAQ(this)" 
+        class="w-full flex justify-between items-center p-5 border border-zinc-800 rounded-lg text-zinc-300 hover:bg-zinc-900 hover:border-zinc-600 transition-colors duration-300 text-left"
+      >
+        <span class="font-semibold text-base">¿Puedo reprogramar la sesión si no puedo asistir?</span>
+        <svg class="h-5 w-5 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div class="hidden px-5 py-4 border border-t-0 border-zinc-800 rounded-b-lg text-zinc-400 text-sm bg-zinc-950">
+        Sí, sin problema. Solo contáctame por WhatsApp con al menos 24 horas de anticipación y reprogramamos en el momento que mejor te funcione.
+      </div>
+
+      <!-- FAQ 3 -->
+      <button 
+        onclick="toggleFAQ(this)" 
+        class="w-full flex justify-between items-center p-5 border border-zinc-800 rounded-lg text-zinc-300 hover:bg-zinc-900 hover:border-zinc-600 transition-colors duration-300 text-left"
+      >
+        <span class="font-semibold text-base">¿Tengo acceso a la grabación después de la sesión?</span>
+        <svg class="h-5 w-5 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div class="hidden px-5 py-4 border border-t-0 border-zinc-800 rounded-b-lg text-zinc-400 text-sm bg-zinc-950">
+        Claro. Recibirás la grabación de la sesión en video + los archivos del proyecto (.flp) y assets utilizados para que puedas seguir trabajando después.
+      </div>
+
+      <!-- FAQ 4 -->
+      <button 
+        onclick="toggleFAQ(this)" 
+        class="w-full flex justify-between items-center p-5 border border-zinc-800 rounded-lg text-zinc-300 hover:bg-zinc-900 hover:border-zinc-600 transition-colors duration-300 text-left"
+      >
+        <span class="font-semibold text-base">¿Es para principiantes o solo para productores avanzados?</span>
+        <svg class="h-5 w-5 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div class="hidden px-5 py-4 border border-t-0 border-zinc-800 rounded-b-lg text-zinc-400 text-sm bg-zinc-950">
+        Para ambos. Adapto completamente el contenido a tu nivel. Si eres principiante, empezamos desde lo básico. Si eres avanzado, profundizamos en técnicas complejas.
+      </div>
+
+      <!-- FAQ 5 -->
+      <button 
+        onclick="toggleFAQ(this)" 
+        class="w-full flex justify-between items-center p-5 border border-zinc-800 rounded-lg text-zinc-300 hover:bg-zinc-900 hover:border-zinc-600 transition-colors duration-300 text-left"
+      >
+        <span class="font-semibold text-base">¿Hay reembolso si no estoy satisfecho?</span>
+        <svg class="h-5 w-5 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div class="hidden px-5 py-4 border border-t-0 border-zinc-800 rounded-b-lg text-zinc-400 text-sm bg-zinc-950">
+        Estoy tan confiado en la calidad que ofrezco reembolso 100% si no estás satisfecho. Contacta dentro de 48 horas de completada la sesión y sin preguntas.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JAVASCRIPT PARA FAQ -->
+<script>
+function toggleFAQ(button) {
+  const answer = button.nextElementSibling;
+  const icon = button.querySelector('svg');
+  
+  // Cerrar otros FAQs
+  document.querySelectorAll('button').forEach(btn => {
+    if (btn !== button && btn.onclick && btn.onclick.toString().includes('toggleFAQ')) {
+      const otherAnswer = btn.nextElementSibling;
+      const otherIcon = btn.querySelector('svg');
+      if (otherAnswer && !otherAnswer.classList.contains('hidden')) {
+        otherAnswer.classList.add('hidden');
+        otherIcon.style.transform = 'rotate(0deg)';
+      }
+    }
+  });
+  
+  // Toggle actual
+  answer.classList.toggle('hidden');
+  icon.style.transform = answer.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+}
+</script>

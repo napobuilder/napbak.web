@@ -1,0 +1,98 @@
+<!-- SECCIÓN DE REVIEWS - CON NOMBRES REALES -->
+
+<section class="w-full py-20 px-6 bg-brand-dark border-t border-zinc-800">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="font-logo font-bold text-4xl text-white mb-4">Lo que dicen mis clientes</h2>
+      <p class="text-zinc-400 max-w-2xl mx-auto">
+        Productores y artistas que han transformado su música con sesiones personalizadas
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Review 1: Edinkross -->
+      <div class="border border-zinc-800 rounded-lg p-8 bg-zinc-950 hover:border-zinc-600 transition-colors duration-300">
+        <div class="flex items-center mb-4">
+          <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+        </div>
+        <p class="text-zinc-300 mb-6 italic">
+          "En mi camino a la música como artista emergente, siempre he buscado hacer yo mismo mis producciones, pero sabía que necesitaría ayuda profesional para llegar lejos. Ahí fue cuando solicité con Napbak una asesoría personalizada, donde me explicara con lujos y detalles lo que necesitaba para poder tener un sonido más profesional. Sinceramente, la explicación que me dio a detalle me ha ayudado a crecer profesionalmente, teniendo un sonido más limpio y agradable para mis seguidores. Gracias a su facilidad para explicarme en la asesoría que tuve con él, he sentido que he crecido como artista al conseguir una mejor producción, y lo más satisfactorio es que, al sentarme en mi computador, ya sé qué estoy haciendo y me siento más seguro al trabajar en mi música."
+        </p>
+        <div class="flex items-center">
+          <img src="FOTO_EDINKROSS.jpg" alt="Edinkross" class="w-10 h-10 rounded-full bg-zinc-800 mr-3 object-cover" />
+          <div>
+            <p class="text-white font-semibold text-sm">Edinkross</p>
+            <p class="text-zinc-500 text-xs">Artista Emergente / Venezuela</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2: Tres Tres - Con Leer Más -->
+      <div class="border border-zinc-800 rounded-lg p-8 bg-zinc-950 hover:border-zinc-600 transition-colors duration-300">
+        <div class="flex items-center mb-4">
+          <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+        </div>
+        
+        <!-- Texto corto (por defecto) -->
+        <p id="review-short" class="text-zinc-300 mb-6 italic">
+          "Para mí, Napoleón es el mejor ingeniero de mix y master de Aragua. Empecé como su alumno hace 5 años y hoy soy su colega. Humildad, sabiduría y confianza: esas tres palabras definen a Napbak y su trabajo."
+        </p>
+        
+        <!-- Texto completo (oculto) -->
+        <p id="review-full" class="text-zinc-300 mb-6 italic hidden">
+          Para mí Napoleón en mi opinión personal (sino es uno de los mejores) es el mejor ingeniero en mix y master de Aragua.
+
+          Y todo eso gracias al nivel TAN ALTO de criterio que posee en su catálogo de skills y variedad de géneros musicales que maneja con total Dirección (todo esto sin mencionar el nivel de composición EVOLUCIONADO que tiene)
+
+          Hola me llamo Rafael Chávez A.K.A "Tres Tres" y necesitaba darles un poco de contexto de quién es mi mentor que posteriormente me convirtió en su colega y por que lo escogí a él para guiarme en este mundo de la producción musical el cual ahora es mi forma de vida y a lo que me dedico día a día. 
+
+          Hace aproximadamente unos 5 años hice mi primer curso de Mix & Master con Napoleón y fue un antes y un después en mi vida y carrera musical.
+
+          ¿Por qué? Porque simplemente la producción musical es la unión entre la ingeniería de audio y la musicalidad y Napoleón es el equilibrio perfecto de ambas cosas, encuentra la solución de los problemas aplicando cualquiera de estos 2 atributos juntos o por separado identificando rápidamente LO QUE SE NECESITA y lo que la obra demande.
+
+          Quisiera poder contarte más. Porque esto solo es un abreboca de todo el curso que Napoleón les puede ofrecer para llevar sus carreras al próximo level. Hay muchísimas cosas que podría decirles que hay detrás de él como el beatmakin o instrumentales humanizadas pero eso les queda a ustedes para el curso 🙏🏻
+
+          Espero puedan vivir esta experiencia que se las recomiendo un montón y que puedan antes que nada compartir con la excelente persona y mentor que se volvió este colega para mí .
+
+          "Humildad, Sabiduría y confianza"
+          
+          Para esas 3 palabras definen este curso y a la increíble persona detrás de todo esto.
+        </p>
+        
+        <!-- Botón Leer Más/Menos -->
+        <button id="btn-leer-mas" onclick="toggleReview()" class="text-sm text-blue-400 hover:text-blue-300 font-semibold focus:outline-none transition-colors duration-300 mb-4">
+          Leer más →
+        </button>
+        
+        <div class="flex items-center">
+          <img src="FOTO_TRES_TRES.jpg" alt="Rafael Chávez - Tres Tres" class="w-10 h-10 rounded-full bg-zinc-800 mr-3 object-cover" />
+          <div>
+            <p class="text-white font-semibold text-sm">Rafael Chávez "Tres Tres"</p>
+            <p class="text-zinc-500 text-xs">Productor / Maracay, Venezuela</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- JAVASCRIPT PARA BOTÓN LEER MÁS -->
+<script>
+function toggleReview() {
+  const shortText = document.getElementById('review-short');
+  const fullText = document.getElementById('review-full');
+  const btn = document.getElementById('btn-leer-mas');
+  
+  if (fullText.classList.contains('hidden')) {
+    fullText.classList.remove('hidden');
+    shortText.classList.add('hidden');
+    btn.textContent = '← Leer menos';
+  } else {
+    fullText.classList.add('hidden');
+    shortText.classList.remove('hidden');
+    btn.textContent = 'Leer más →';
+  }
+}
+</script>
