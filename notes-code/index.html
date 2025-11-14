@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende FL Studio en 1 Hora - Napoleón Baca | Napbak Music</title>
+    <meta name="description" content="Sesión personalizada de FL Studio con un productor profesional. 1 hora de coaching en producción, mezcla y mastering. $45 USD.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #0A0A0A;
+            color: #FAFAFA;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
+        }
+
+        .glass-card {
+            background: rgba(38, 38, 38, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(250, 250, 250, 0.1);
+        }
+
+        .btn-primary {
+            background: #D946EF;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #E879F9;
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(217, 70, 239, 0.5);
+        }
+
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 40px rgba(217, 70, 239, 0.2);
+        }
+
+        .video-placeholder {
+            position: relative;
+            padding-bottom: 56.25%;
+            background: #262626;
+            border-radius: 12px;
+            overflow: hidden;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .video-placeholder-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100%;
+        }
+
+        .play-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(217, 70, 239, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+        }
+
+        .play-icon::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 24px solid #FAFAFA;
+            border-top: 14px solid transparent;
+            border-bottom: 14px solid transparent;
+            margin-left: 6px;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(250, 250, 250, 0.1);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer.active {
+            max-height: 200px;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-icon.active {
+            transform: rotate(180deg);
+        }
+
+        .checkmark {
+            color: #FACC15;
+            font-weight: bold;
+            margin-right: 12px;
+        }
+
+        .calendly-placeholder {
+            min-height: 700px;
+            background: #262626;
+            border: 2px dashed rgba(217, 70, 239, 0.3);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            background: #D946EF;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 24px;
+        }
+
+        .before-after-item {
+            background: #262626;
+            padding: 60px 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <section class="gradient-bg py-12 md:py-20">
+        <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <!-- Video Section -->
+                <div class="fade-in">
+                    <div class="video-placeholder">
+                        <div class="video-placeholder-content">
+                            <div class="play-icon"></div>
+                            <p class="text-lg font-semibold text-gray-400">TU VIDEO AQUÍ</p>
+                            <p class="text-sm text-gray-500 mt-2 px-4">Habla sobre tu experiencia y por qué esta sesión es valiosa</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Section -->
+                <div class="fade-in">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Aprende FL Studio en 1 Hora con un Productor Profesional
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                        Sesión personalizada de producción, mezcla y mastering - Resuelve TUS problemas específicos
+                    </p>
+                    <a href="#calendly" class="btn-primary inline-block text-white text-lg md:text-xl font-bold px-8 py-4 rounded-lg mb-4">
+                        Agenda tu sesión - $45
+                    </a>
+                    <div class="flex items-center text-green-400">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-lg">10+ años produciendo en FL Studio</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS SECTION -->
+    <section class="py-16 md:py-24 bg-black">
+        <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">¿Por Qué Esta Sesión?</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Benefit 1 -->
+                <div class="glass-card p-8 rounded-xl card-hover fade-in">
+                    <div class="text-5xl mb-4">🎯</div>
+                    <h3 class="text-2xl font-bold mb-3">Sesión Personalizada</h3>
+                    <p class="text-gray-400 text-lg">Trabajamos en TU proyecto específico, no teoría genérica</p>
+                </div>
+                <!-- Benefit 2 -->
+                <div class="glass-card p-8 rounded-xl card-hover fade-in">
+                    <div class="text-5xl mb-4">⚡</div>
+                    <h3 class="text-2xl font-bold mb-3">Resultados Inmediatos</h3>
+                    <p class="text-gray-400 text-lg">En 60 minutos verás mejoras reales en tu producción</p>
+                </div>
+                <!-- Benefit 3 -->
+                <div class="glass-card p-8 rounded-xl card-hover fade-in">
+                    <div class="text-5xl mb-4">🖥️</div>
+                    <h3 class="text-2xl font-bold mb-3">Screen Share en Vivo</h3>
+                    <p class="text-gray-400 text-lg">Te muestro técnicas profesionales en tiempo real</p>
+                </div>
+                <!-- Benefit 4 -->
+                <div class="glass-card p-8 rounded-xl card-hover fade-in">
+                    <div class="text-5xl mb-4">📹</div>
+                    <h3 class="text-2xl font-bold mb-3">Grabación Incluida</h3>
+                    <p class="text-gray-400 text-lg">Revisar la sesión cuando quieras, sin límite</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF SECTION -->
+    <section class="py-16 md:py-24" style="background: #1A1A1A;">
+        <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">Lo Que Dicen Mis Clientes</h2>
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Testimonial 1 -->
+                <div class="glass-card p-6 rounded-xl fade-in">
+                    <div class="flex flex-col items-center mb-4">
+                        <div class="w-20 h-20 rounded-full bg-gray-700 flex items-center justify-center text-sm text-gray-400 mb-3">
+                            FOTO<br>CLIENTE
+                        </div>
+                        <div class="flex mb-2">
+                            <span class="text-yellow-400 text-xl">★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4 italic">"En una hora aprendí más que en 3 meses solo. Napoleón sabe exactamente qué hacer para que tus beats suenen pro."</p>
+                    <p class="text-gray-400 font-semibold">Juan P. - México</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="glass-card p-6 rounded-xl fade-in">
+                    <div class="flex flex-col items-center mb-4">
+                        <div class="w-20 h-20 rounded-full bg-gray-700 flex items-center justify-center text-sm text-gray-400 mb-3">
+                            FOTO<br>CLIENTE
+                        </div>
+                        <div class="flex mb-2">
+                            <span class="text-yellow-400 text-xl">★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4 italic">"La mejor inversión. Mi mezcla pasó de amateur a nivel competitivo. 100% recomendado."</p>
+                    <p class="text-gray-400 font-semibold">Carlos M. - España</p>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="glass-card p-6 rounded-xl fade-in">
+                    <div class="flex flex-col items-center mb-4">
+                        <div class="w-20 h-20 rounded-full bg-gray-700 flex items-center justify-center text-sm text-gray-400 mb-3">
+                            FOTO<br>CLIENTE
+                        </div>
+                        <div class="flex mb-2">
+                            <span class="text-yellow-400 text-xl">★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4 italic">"Increíble. Resolvió todos mis problemas de producción y me dio tips que ningún tutorial menciona."</p>
+                    <p class="text-gray-400 font-semibold">Ana R. - Argentina</p>
+                </div>
+            </div>
+
+            <!-- Before/After Showcase -->
+            <div class="max-w-3xl mx-auto fade-in">
+                <div class="before-after">
+                    <div class="before-after-item">
+                        <p class="text-red-400">ANTES</p>
+                        <div class="mt-4 text-sm text-gray-400">Tu mezcla aquí</div>
+                    </div>
+                    <div class="before-after-item">
+                        <p style="color: #D946EF;">DESPUÉS</p>
+                        <div class="mt-4 text-sm text-gray-400">Resultado profesional</div>
+                    </div>
+                </div>
+                <p class="text-center mt-4 text-gray-400">Transformación de mezcla en 1 hora</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT YOU'LL LEARN SECTION -->
+    <section class="py-16 md:py-24 bg-black">
+        <div class="container mx-auto px-4 md:px-6 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">¿Qué Aprenderás?</h2>
+            <div class="glass-card p-8 md:p-12 rounded-xl fade-in">
+                <ul class="space-y-4 text-lg">
+                    <li class="flex items-start">
+                        <span class="checkmark text-2xl">✓</span>
+                        <span>Técnicas avanzadas de mezcla en FL Studio</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="checkmark text-2xl">✓</span>
+                        <span>Cómo hacer que tus beats suenen profesionales</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="checkmark text-2xl">✓</span>
+                        <span>Mastering básico para plataformas digitales</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="checkmark text-2xl">✓</span>
+                        <span>Workflow optimizado y shortcuts esenciales</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="checkmark text-2xl">✓</span>
+                        <span>Solución de problemas específicos de TU proyecto</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="checkmark text-2xl">✓</span>
+                        <span>Trucos que usan los productores profesionales</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="py-16 md:py-24" style="background: #1A1A1A;">
+        <div class="container mx-auto px-4 md:px-6 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">Preguntas Frecuentes</h2>
+            <div class="space-y-4 fade-in">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <button class="faq-question w-full text-left py-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                        <span class="text-xl font-semibold pr-4">¿Para qué nivel es esta sesión?</span>
+                        <svg class="faq-icon w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-2 pb-6">
+                        <p class="text-gray-400 text-lg">Desde principiantes hasta intermedios. Adaptamos el contenido a tu nivel.</p>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <button class="faq-question w-full text-left py-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                        <span class="text-xl font-semibold pr-4">¿Qué necesito tener?</span>
+                        <svg class="faq-icon w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-2 pb-6">
+                        <p class="text-gray-400 text-lg">FL Studio instalado, tu proyecto (opcional), y conexión a internet estable.</p>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <button class="faq-question w-full text-left py-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                        <span class="text-xl font-semibold pr-4">¿Qué incluye la sesión?</span>
+                        <svg class="faq-icon w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-2 pb-6">
+                        <p class="text-gray-400 text-lg">1 hora vía Zoom, screen share, grabación de la sesión, y notas.</p>
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <button class="faq-question w-full text-left py-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                        <span class="text-xl font-semibold pr-4">¿Puedo agendar para hoy?</span>
+                        <svg class="faq-icon w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-2 pb-6">
+                        <p class="text-gray-400 text-lg">Sí, tenemos slots disponibles el mismo día. Revisa el calendario abajo.</p>
+                    </div>
+                </div>
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <button class="faq-question w-full text-left py-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                        <span class="text-xl font-semibold pr-4">¿Cómo funciona el pago?</span>
+                        <svg class="faq-icon w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-2 pb-6">
+                        <p class="text-gray-400 text-lg">Pagas $45 USD vía PayPal al seleccionar tu horario. Seguro y fácil.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA + CALENDLY SECTION -->
+    <section id="calendly" class="py-16 md:py-24 bg-black">
+        <div class="container mx-auto px-4 md:px-6 max-w-5xl">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Agenda Tu Sesión Ahora</h2>
+                <p class="text-xl md:text-2xl text-gray-300 mb-2">Slots disponibles HOY - Solo $45 USD</p>
+            </div>
+            
+            <!-- Calendly Placeholder -->
+            <div class="calendly-placeholder fade-in">
+                <div>
+                    <div class="text-6xl mb-6" style="color: #D946EF;">📅</div>
+                    <h3 class="text-2xl font-bold mb-4">CALENDLY WIDGET AQUÍ</h3>
+                    <p class="text-gray-400 max-w-md mx-auto mb-6">
+                        El usuario debe embeber su widget de Calendly en este espacio usando:
+                    </p>
+                    <code class="text-sm bg-gray-800 px-4 py-2 rounded inline-block text-left">
+                        &lt;script src="https://assets.calendly.com/assets/external/widget.js"&gt;&lt;/script&gt;
+                    </code>
+                </div>
+            </div>
+
+            <div class="text-center mt-8 text-gray-400 fade-in">
+                <p class="text-lg">
+                    <span class="mr-4">💳 Pago seguro con PayPal</span>
+                    <span>🔒 Datos protegidos</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12" style="background: #141414;">
+        <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <!-- Left Column -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-3">Napoleón Baca - Napbak Music</h3>
+                    <p class="text-gray-400 mb-4">Productor profesional de FL Studio con más de 10 años de experiencia</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition">
+                            <span class="text-sm">IG</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition">
+                            <span class="text-sm">YT</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition">
+                            <span class="text-sm">SP</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Right Column -->
+                <div class="md:text-right">
+                    <a href="#" class="text-gray-400 hover:text-white transition mr-6">Términos</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacidad</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 Napbak Music. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // FAQ Toggle Function
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('.faq-icon');
+            const allAnswers = document.querySelectorAll('.faq-answer');
+            const allIcons = document.querySelectorAll('.faq-icon');
+
+            // Close all other FAQs
+            allAnswers.forEach(item => {
+                if (item !== answer) {
+                    item.classList.remove('active');
+                }
+            });
+            allIcons.forEach(item => {
+                if (item !== icon) {
+                    item.classList.remove('active');
+                }
+            });
+
+            // Toggle current FAQ
+            answer.classList.toggle('active');
+            icon.classList.toggle('active');
+        }
+
+        // Smooth scroll for CTA button
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

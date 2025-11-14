@@ -1,0 +1,320 @@
+<!-- 
+  =========================================================
+  NAPBAK MUSIC SESSIONS - SECCIÓN A INTEGRAR
+  =========================================================
+  
+  INSTRUCCIONES DE INTEGRACIÓN:
+  1. Copia TODO este código (desde <!-- SESSIONS SECTION hasta el último </section>)
+  2. Pégalo en tu nap.html ANTES del </section> de la sección "App"
+  3. Cambia "YOUR_CLIENT_ID" en el script de PayPal por tu ID real
+  4. Reemplaza los links de Calendly con tu usuario real
+  
+  ESTILOS: Usa los mismos que tu sitio actual (Tailwind, colores zinc, Inter/Poppins)
+  =========================================================
+-->
+
+<!-- SESSIONS SECTION -->
+<section id="sessions" class="w-full py-20 px-6 bg-brand-dark border-t border-zinc-800">
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- HEADER -->
+    <div class="text-center mb-16">
+      <h2 class="font-logo font-bold text-4xl md:text-5xl text-white mb-4">
+        Napbak Music Sessions
+      </h2>
+      <p class="text-lg text-zinc-400 max-w-2xl mx-auto">
+        Sesiones 1-on-1 personalizadas. Elige tu sesión, reserva tu horario y comienza a mejorar tu producción.
+      </p>
+    </div>
+
+    <!-- SESSIONS GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      
+      <!-- SESSION 1: FL Studio Foundation -->
+      <div class="border border-zinc-800 rounded-lg p-8 hover:border-zinc-600 transition-colors duration-300 bg-zinc-950">
+        <div class="mb-6">
+          <h3 class="font-logo font-bold text-2xl text-white mb-2">
+            FL Studio Foundation
+          </h3>
+          <p class="text-3xl font-bold text-white">$50</p>
+          <p class="text-sm text-zinc-500 mt-2">60 minutos</p>
+        </div>
+        
+        <p class="text-zinc-300 mb-6">
+          Optimiza tu setup de FL Studio y domina tu workflow. Ideal para productores que quieren mejorar su eficiencia y conocer plugins esenciales.
+        </p>
+        
+        <ul class="space-y-2 mb-8 text-zinc-400 text-sm">
+          <li class="flex items-start">
+            <span class="text-zinc-600 mr-3">✓</span>
+            <span>Configuración optimizada de FL Studio</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-zinc-600 mr-3">✓</span>
+            <span>Introducción a 1 plugin clave</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-zinc-600 mr-3">✓</span>
+            <span>Tips personalizados para tu workflow</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-zinc-600 mr-3">✓</span>
+            <span>Acceso a recursos de referencia</span>
+          </li>
+        </ul>
+        
+        <!-- PayPal Button - FL Studio Foundation -->
+        <div id="paypal-button-fl-foundation" class="mb-4"></div>
+        
+        <!-- Manual Calendar Link (Fallback) -->
+        <a href="https://calendly.com/napbakmusic/fl-studio-foundation" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="block text-center border border-zinc-700 text-zinc-300 font-semibold px-6 py-2 rounded-lg hover:bg-zinc-800 hover:border-zinc-600 transition-colors duration-300 text-sm">
+          O reserva aquí →
+        </a>
+      </div>
+
+      <!-- SESSION 2: Beat Arrangement Clinic -->
+      <div class="border border-zinc-800 rounded-lg p-8 hover:border-zinc-600 transition-colors duration-300 bg-zinc-950">
+        <div class="mb-6">
+          <h3 class="font-logo font-bold text-2xl text-white mb-2">
+            Beat Arrangement Clinic
+          </h3>
+          <p class="text-3xl font-bold text-white">$45</p>
+          <p class="text-sm text-zinc-500 mt-2">45 minutos</p>
+        </div>
+        
+        <p class="text-zinc-300 mb-6">
+          Trae un beat sin arrancar. Lo completamos juntos: intro, build-up, drops y outro. Aprenderás estructura profesional en tiempo real.
+        </p>
+        
+        <ul class="space-y-2 mb-8 text-zinc-400 text-sm">
+          <li class="flex items-start">
+            <span class="text-zinc-600 mr-3">✓</span>
+            <span>Análisis de tu beat actual</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-zinc-600 mr-3">✓</span>
+            <span>Arreglos en vivo en FL Studio</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-zinc-600 mr-3">✓</span>
+            <span>Tips de transiciones y dinámica</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-zinc-600 mr-3">✓</span>
+            <span>Descarga los archivos editados</span>
+          </li>
+        </ul>
+        
+        <!-- PayPal Button - Beat Arrangement -->
+        <div id="paypal-button-beat-arrangement" class="mb-4"></div>
+        
+        <!-- Manual Calendar Link (Fallback) -->
+        <a href="https://calendly.com/napbakmusic/beat-arrangement-clinic" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="block text-center border border-zinc-700 text-zinc-300 font-semibold px-6 py-2 rounded-lg hover:bg-zinc-800 hover:border-zinc-600 transition-colors duration-300 text-sm">
+          O reserva aquí →
+        </a>
+      </div>
+
+      <!-- SESSION 3: Mezcla Express -->
+      <div class="border border-zinc-800 rounded-lg p-8 hover:border-zinc-600 transition-colors duration-300 bg-zinc-950">
+        <div class="mb-6">
+          <h3 class="font-logo font-bold text-2xl text-white mb-2">
+            Mezcla Express
+          </h3>
+          <p class="text-3xl font-bold text-white">$60</p>
+          <p class="text-sm text-zinc-500 mt-2">60 minutos</p>
+        </div>
+        
+        <p class="text-zinc-300 mb-6">
+          Trae stems sin mezclar. Mezclo en vivo mientras ves el proceso. Incluye master preliminar. Perfecto para aprender cómo suenan beats profesionales.
+        </p>
+        
+        <ul class="space-y-2 mb-8 text-zinc-400 text-sm">
+          <li class="flex items-start">
+            <span class="text-zinc-600 mr-3">✓</span>
+            <span>Mezcla en vivo en FL Studio</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-zinc-600 mr-3">✓</span>
+            <span>Balance de niveles y EQ</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-zinc-600 mr-3">✓</span>
+            <span>Uso efectivo de efectos y automation</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-zinc-600 mr-3">✓</span>
+            <span>Master preliminar + archivos finales</span>
+          </li>
+        </ul>
+        
+        <!-- PayPal Button - Mezcla Express -->
+        <div id="paypal-button-mezcla-express" class="mb-4"></div>
+        
+        <!-- Manual Calendar Link (Fallback) -->
+        <a href="https://calendly.com/napbakmusic/mezcla-express" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="block text-center border border-zinc-700 text-zinc-300 font-semibold px-6 py-2 rounded-lg hover:bg-zinc-800 hover:border-zinc-600 transition-colors duration-300 text-sm">
+          O reserva aquí →
+        </a>
+      </div>
+
+      <!-- SESSION 4: Consultoría Creativa -->
+      <div class="border border-zinc-800 rounded-lg p-8 hover:border-zinc-600 transition-colors duration-300 bg-zinc-950">
+        <div class="mb-6">
+          <h3 class="font-logo font-bold text-2xl text-white mb-2">
+            Consultoría Creativa
+          </h3>
+          <p class="text-3xl font-bold text-white">$50</p>
+          <p class="text-sm text-zinc-500 mt-2">60 minutos</p>
+        </div>
+        
+        <p class="text-zinc-300 mb-6">
+          Dirección creativa y feedback artístico. Trae tu proyecto (idea, beat en progreso, o mezcla). Recibe análisis honesto y estrategia para mejorar.
+        </p>
+        
+        <ul class="space-y-2 mb-8 text-zinc-400 text-sm">
+          <li class="flex items-start">
+            <span class="text-zinc-600 mr-3">✓</span>
+            <span>Feedback creativo personalizado</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-zinc-600 mr-3">✓</span>
+            <span>Análisis de referentes musicales</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-zinc-600 mr-3">✓</span>
+            <span>Estrategia para tu sonido único</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-zinc-600 mr-3">✓</span>
+            <span>Plan de acción para mejora continua</span>
+          </li>
+        </ul>
+        
+        <!-- PayPal Button - Consultoría -->
+        <div id="paypal-button-consultoria" class="mb-4"></div>
+        
+        <!-- Manual Calendar Link (Fallback) -->
+        <a href="https://calendly.com/napbakmusic/consultoria-creativa" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="block text-center border border-zinc-700 text-zinc-300 font-semibold px-6 py-2 rounded-lg hover:bg-zinc-800 hover:border-zinc-600 transition-colors duration-300 text-sm">
+          O reserva aquí →
+        </a>
+      </div>
+
+    </div>
+
+    <!-- CTA SECTION -->
+    <div class="border border-zinc-800 rounded-lg p-12 bg-zinc-950 text-center">
+      <h3 class="font-logo font-bold text-2xl text-white mb-3">
+        ¿No sabes cuál sesión elegir?
+      </h3>
+      <p class="text-zinc-400 mb-6 max-w-2xl mx-auto">
+        Envía un mensaje a través de Instagram o WhatsApp y cuéntame tu objetivo. Te recomendaré la sesión perfecta para ti.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="inline-block border border-zinc-700 text-zinc-300 font-semibold px-8 py-3 rounded-lg hover:bg-zinc-800 hover:border-zinc-600 transition-colors duration-300">
+          WhatsApp
+        </a>
+        <a href="https://instagram.com/napbakmusic" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="inline-block border border-zinc-700 text-zinc-300 font-semibold px-8 py-3 rounded-lg hover:bg-zinc-800 hover:border-zinc-600 transition-colors duration-300">
+          Instagram DM
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========================================================
+     PAYPAL SCRIPT - COPIA ESTO AL FINAL DE TU HTML (antes de </body>)
+     ======================================================== -->
+
+<!-- Script de PayPal SDK -->
+<script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
+
+<script>
+// Configuración de botones PayPal
+const paypalSessions = [
+  {
+    id: 'fl-foundation',
+    containerId: 'paypal-button-fl-foundation',
+    amount: '50.00',
+    sessionName: 'FL Studio Foundation',
+    calendlyUrl: 'https://calendly.com/napbakmusic/fl-studio-foundation'
+  },
+  {
+    id: 'beat-arrangement',
+    containerId: 'paypal-button-beat-arrangement',
+    amount: '45.00',
+    sessionName: 'Beat Arrangement Clinic',
+    calendlyUrl: 'https://calendly.com/napbakmusic/beat-arrangement-clinic'
+  },
+  {
+    id: 'mezcla-express',
+    containerId: 'paypal-button-mezcla-express',
+    amount: '60.00',
+    sessionName: 'Mezcla Express',
+    calendlyUrl: 'https://calendly.com/napbakmusic/mezcla-express'
+  },
+  {
+    id: 'consultoria',
+    containerId: 'paypal-button-consultoria',
+    amount: '50.00',
+    sessionName: 'Consultoría Creativa',
+    calendlyUrl: 'https://calendly.com/napbakmusic/consultoria-creativa'
+  }
+];
+
+// Renderizar cada botón PayPal
+paypalSessions.forEach(session => {
+  paypal.Buttons({
+    createOrder: (data, actions) => {
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: session.amount
+          },
+          description: session.sessionName
+        }]
+      });
+    },
+    onApprove: (data, actions) => {
+      return actions.order.capture().then(() => {
+        // Guardar info del pago en localStorage (opcional)
+        const paymentInfo = {
+          session: session.sessionName,
+          date: new Date().toISOString(),
+          orderId: data.orderID
+        };
+        localStorage.setItem(`napbak_payment_${session.id}`, JSON.stringify(paymentInfo));
+        
+        // Mostrar mensaje de confirmación
+        alert(`¡Pago completado! Te redirigimos a Calendly para elegir tu horario.`);
+        
+        // Redirigir a Calendly
+        setTimeout(() => {
+          window.location.href = session.calendlyUrl;
+        }, 500);
+      });
+    },
+    onError: (err) => {
+      alert('Hubo un error con el pago. Por favor, intenta nuevamente.');
+      console.error('PayPal Error:', err);
+    }
+  }).render(`#${session.containerId}`);
+});
+</script>

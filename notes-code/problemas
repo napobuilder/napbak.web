@@ -1,0 +1,25 @@
+Sobre la API
+La API pública permite consultar las tasas oficiales actuales y el historial de cambios en bolívares. El acceso es gratuito y abierto para desarrolladores, pero está sujeto a cambios y disponibilidad.
+Límite de uso: 60 solicitudes por minuto por IP.
+Tasa actual
+Endpoint público
+GET
+https://api.dolarvzla.com/public/exchange-rate
+Obtiene las tasas oficiales actuales de USD y EUR en bolívares. Respuesta JSON con campos: usd, eur, date.
+Historial de tasas
+Endpoint público
+GET
+https://api.dolarvzla.com/public/exchange-rate/list
+Parámetros:
+from (string) [opcional]: Fecha de inicio (YYYY-MM-DD). Opcional.
+to (string) [opcional]: Fecha de fin (YYYY-MM-DD). Opcional.
+Obtiene el historial de tasas oficiales.
+Respuesta JSON con arreglo de objetos: date, usd, eur.
+Intervenciones bancarias
+Endpoint público
+GET
+https://api.dolarvzla.com/public/interventions
+Parámetros:
+from (string) [opcional]: Fecha de inicio (YYYY-MM-DD). Opcional.
+Obtiene la lista de intervenciones cambiarias del BCV.
+Respuesta JSON con arreglo de objetos: id, date, rate.

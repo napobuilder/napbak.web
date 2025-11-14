@@ -117,6 +117,24 @@
 
   <!-- 
     ==================================================
+    HEADER & NAVIGATION
+    ==================================================
+  -->
+  <header class="bg-brand-dark/80 backdrop-blur-lg sticky top-0 z-50 border-b border-zinc-800/50">
+    <nav class="max-w-4xl mx-auto px-6 py-3 flex justify-between items-center">
+      <a href="./en.html" class="font-logo font-bold text-xl text-white">
+        napbak<span class="text-zinc-500">.</span>
+      </a>
+      <ul class="flex items-center space-x-6 text-sm font-medium">
+        <li><a href="#sounds" class="text-zinc-400 hover:text-white transition-colors">Sounds</a></li>
+        <li><a href="sessions/" class="text-zinc-400 hover:text-white transition-colors">Sessions</a></li>
+        <li><a href="#connect" class="text-zinc-400 hover:text-white transition-colors">Connect</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 
+    ==================================================
     HERO SECTION
     ==================================================
   -->
@@ -184,7 +202,7 @@
     SECTION 2: SOUNDS
     ==================================================
   -->
-  <section class="w-full py-20 px-6 bg-brand-dark">
+  <section id="sounds" class="w-full py-20 px-6 bg-brand-dark">
     <div class="max-w-4xl mx-auto">
       
       <h2 class="font-logo text-4xl sm:text-5xl font-bold text-zinc-100 text-center mb-16">
@@ -286,10 +304,61 @@
 
   <!-- 
     ==================================================
+    SECTION "SESSIONS TEASER"
+    ==================================================
+  -->
+  <section class="py-20 px-6 bg-brand-dark border-t border-zinc-800/50">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-logo font-bold text-4xl sm:text-5xl text-white mb-4">
+        Napbak Music Sessions
+      </h2>
+      <p class="text-lg text-zinc-400 mb-12 max-w-2xl mx-auto">
+        1-on-1 sessions to take your music to the next level. Mixing, FL Studio, arrangement, or creative consulting.
+      </p>
+    </div>
+  
+    <!-- 4 CARDS IN GRID -->
+    <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+      <!-- Card 1 -->
+      <div class="border border-zinc-800 p-6 rounded-lg hover:border-zinc-700 transition-colors text-center">
+        <h3 class="font-semibold text-white mb-2">FL Studio Foundation</h3>
+        <p class="text-2xl font-bold text-white">$50</p>
+        <p class="text-sm text-zinc-500">60 min</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="border border-zinc-800 p-6 rounded-lg hover:border-zinc-700 transition-colors text-center">
+        <h3 class="font-semibold text-white mb-2">Beat Arrangement</h3>
+        <p class="text-2xl font-bold text-white">$45</p>
+        <p class="text-sm text-zinc-500">45 min</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="border border-zinc-800 p-6 rounded-lg hover:border-zinc-700 transition-colors text-center">
+        <h3 class="font-semibold text-white mb-2">Express Mix</h3>
+        <p class="text-2xl font-bold text-white">$60</p>
+        <p class="text-sm text-zinc-500">60 min</p>
+      </div>
+      <!-- Card 4 -->
+      <div class="border border-zinc-800 p-6 rounded-lg hover:border-zinc-700 transition-colors text-center">
+        <h3 class="font-semibold text-white mb-2">Creative Consulting</h3>
+        <p class="text-2xl font-bold text-white">$50</p>
+        <p class="text-sm text-zinc-500">60 min</p>
+      </div>
+    </div>
+  
+    <!-- CTA FINAL -->
+    <div class="text-center">
+      <a href="sessions/" class="inline-block border border-zinc-700 text-zinc-300 font-semibold px-8 py-3 rounded-lg hover:bg-zinc-800 hover:border-zinc-600 transition-colors duration-300">
+        See All Sessions →
+      </a>
+    </div>
+  </section>
+
+  <!-- 
+    ==================================================
     SECTION 3: CONNECT
     ==================================================
   -->
-  <section class="w-full py-20 px-6 bg-brand-dark border-t border-zinc-800/50">
+  <section id="connect" class="w-full py-20 px-6 bg-brand-dark border-t border-zinc-800/50">
     <div class="max-w-4xl mx-auto text-center">
       
       <h2 class="font-logo text-4xl sm:text-5xl font-bold text-zinc-100 mb-16">
