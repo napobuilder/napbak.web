@@ -103,6 +103,60 @@
         </p>
       </div>
 
+      <!-- ================================== -->
+      <!--      CÓMO FUNCIONA (NUEVA SECCIÓN)      -->
+      <!-- ================================== -->
+      <div class="max-w-5xl mx-auto text-left mb-20 px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-10">
+          
+          <!-- Paso 1 -->
+          <div class="relative">
+            <div class="flex items-center mb-3">
+              <div class="flex items-center justify-center h-8 w-8 rounded-full bg-zinc-800 text-white font-bold text-sm mr-4 border border-zinc-700">1</div>
+              <h4 class="font-bold text-white">Elige tu sesión</h4>
+            </div>
+            <p class="text-zinc-400 text-sm">
+              Selecciona el servicio que necesitas de las opciones de abajo.
+            </p>
+          </div>
+          
+          <!-- Paso 2 -->
+          <div class="relative">
+            <div class="flex items-center mb-3">
+              <div class="flex items-center justify-center h-8 w-8 rounded-full bg-zinc-800 text-white font-bold text-sm mr-4 border border-zinc-700">2</div>
+              <h4 class="font-bold text-white">Realiza el pago</h4>
+            </div>
+            <p class="text-zinc-400 text-sm">
+              Usa PayPal para un pago seguro o elige un método alternativo.
+            </p>
+          </div>
+
+          <!-- Paso 3 -->
+          <div class="relative">
+            <div class="flex items-center mb-3">
+              <div class="flex items-center justify-center h-8 w-8 rounded-full bg-zinc-800 text-white font-bold text-sm mr-4 border border-zinc-700">3</div>
+              <h4 class="font-bold text-white">Agenda tu horario</h4>
+            </div>
+            <p class="text-zinc-400 text-sm">
+              Una vez confirmado el pago, recibirás un enlace a mi Calendly para que elijas tu día y hora.
+            </p>
+          </div>
+
+          <!-- Paso 4 -->
+          <div class="relative">
+            <div class="flex items-center mb-3">
+              <div class="flex items-center justify-center h-8 w-8 rounded-full bg-zinc-800 text-white font-bold text-sm mr-4 border border-zinc-700">4</div>
+              <h4 class="font-bold text-white">¡A producir!</h4>
+            </div>
+            <p class="text-zinc-400 text-sm">
+              Nos conectamos a la hora acordada y empezamos a trabajar en tu música.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+
       <!-- SESSIONS GRID -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
   
@@ -146,7 +200,7 @@
             <input type="hidden" name="currency_code" value="USD" />
             <button type="submit" 
                     class="w-full border border-zinc-700 text-zinc-300 font-semibold px-6 py-3 rounded-lg hover:bg-zinc-800 hover:border-zinc-600 transition-colors duration-300">
-              Pagar $50
+Reservar ($50)
             </button>
           </form>
         </div>
@@ -191,7 +245,7 @@
             <input type="hidden" name="currency_code" value="USD" />
             <button type="submit" 
                     class="w-full border border-zinc-700 text-zinc-300 font-semibold px-6 py-3 rounded-lg hover:bg-zinc-800 hover:border-zinc-600 transition-colors duration-300">
-              Pagar $45
+              Reservar ($45)
             </button>
           </form>
         </div>
@@ -236,7 +290,7 @@
             <input type="hidden" name="currency_code" value="USD" />
             <button type="submit" 
                     class="w-full border border-zinc-700 text-zinc-300 font-semibold px-6 py-3 rounded-lg hover:bg-zinc-800 hover:border-zinc-600 transition-colors duration-300">
-              Pagar $60
+              Reservar ($60)
             </button>
           </form>
         </div>
@@ -281,65 +335,91 @@
             <input type="hidden" name="currency_code" value="USD" />
             <button type="submit" 
                     class="w-full border border-zinc-700 text-zinc-300 font-semibold px-6 py-3 rounded-lg hover:bg-zinc-800 hover:border-zinc-600 transition-colors duration-300">
-              Pagar $50
+              Reservar ($50)
             </button>
           </form>
         </div>
       
       </div>
 
-      <!-- MÉTODOS DE PAGO ALTERNATIVOS -->
+      <!-- MÉTODOS DE PAGO ALTERNATIVOS (ACORDEÓN) -->
       <section class="w-full py-16 px-6 bg-brand-dark border-t border-zinc-800">
         <div class="max-w-4xl mx-auto text-center mb-12">
           <h2 class="font-logo font-bold text-4xl text-white mb-4">Otros métodos de pago</h2>
           <p class="text-zinc-400 mb-8 max-w-2xl mx-auto">
-            Si no tienes PayPal, puedes pagar con Pago Móvil (Venezuela) o Binance (USDT). Te explicamos cómo.
+            Si no tienes PayPal, puedes pagar con Pago Móvil (Venezuela) o Binance (USDT). Haz clic en una opción para ver los detalles.
           </p>
         </div>
       
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-          <!-- PAGO MÓVIL VENEZUELA -->
-          <div class="border border-zinc-800 rounded-lg p-8 bg-zinc-950 text-left shadow-lg">
-            <h3 class="font-logo font-semibold text-xl text-white mb-4">📱 Pago Móvil (Venezuela)</h3>
-            <ul class="text-zinc-300 space-y-1 mb-6 text-sm">
-              <li><strong>Banco:</strong> Provincial</li>
-              <li><strong>Cédula:</strong> 19.531.198</li>
-              <li><strong>Teléfono:</strong> 0412 147 9466</li>
-              <li><strong>Referencia:</strong> Tu nombre o ID de sesión</li>
-              <li><strong>Tasa de cambio:</strong> <span id="bcv-rate">Cargando Dolar Oficial...</span></li>
-            </ul>
-            <p class="text-zinc-400 text-xs mb-4">
-              Envía el comprobante de pago por WhatsApp y te confirmo la sesión en cuanto vea el pago.
-            </p>
-            <a href="https://wa.me/584121479466" target="_blank" rel="noopener noreferrer" class="inline-block border border-zinc-700 text-zinc-300 font-semibold px-6 py-3 rounded-lg hover:bg-zinc-800 hover:border-zinc-600 transition-colors duration-300">
-              Enviar comprobante WhatsApp
-            </a>
-          </div>
-      
-          <!-- BINANCE USDT -->
-          <div class="border border-zinc-800 rounded-lg p-8 bg-zinc-950 text-left shadow-lg">
-            <h3 class="font-logo font-semibold text-xl text-white mb-4">💰 Binance USDT (TRC20)</h3>
-            <p class="text-zinc-300 mb-4 max-w-md break-words">
-              Dirección de wallet TRC20:<br />
-              <code class="bg-zinc-800 p-2 rounded text-sm block select-all">TP9Jpzk2rpbzggrh1YcHGsmUVEuNoRSxRg</code>
-            </p>
-            <ul class="text-zinc-300 space-y-1 mb-6 text-sm">
-              <li><strong>Moneda:</strong> USDT</li>
-              <li><strong>Red:</strong> TRC20 (Tron)</li>
-              <li><strong>Correo para contacto:</strong> <a href="mailto:napbak@gmail.com" class="underline text-zinc-300 hover:text-white">napbak@gmail.com</a></li>
-            </ul>
-            <p class="text-zinc-400 text-xs mb-4">
-              Después de hacer la transferencia, envía el comprobante por email o WhatsApp para confirmar.
-            </p>
-            <div class="flex space-x-4">
-              <a href="mailto:napbak@gmail.com" class="flex-1 border border-zinc-700 text-zinc-300 font-semibold px-6 py-3 rounded-lg text-center hover:bg-zinc-800 hover:border-zinc-600 transition-colors duration-300">
-                Enviar comprobante Email
-              </a>
-              <a href="https://wa.me/584121479466" target="_blank" rel="noopener noreferrer" class="flex-1 border border-zinc-700 text-zinc-300 font-semibold px-6 py-3 rounded-lg text-center hover:bg-zinc-800 hover:border-zinc-600 transition-colors duration-300">
-                Enviar comprobante WhatsApp
-              </a>
+        <div class="max-w-2xl mx-auto space-y-4">
+          
+          <!-- Acordeón 1: Pago Móvil -->
+          <div>
+            <button type="button" class="accordion-trigger flex justify-between items-center w-full p-5 font-semibold text-left text-white bg-zinc-900 border border-zinc-800 rounded-lg hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-zinc-700 transition-all duration-300">
+              <span class="flex items-center">
+                <img src="../assets/logos/bbva.svg" alt="Logo de BBVA" class="w-auto h-4 mr-3">
+                Pago Móvil (Venezuela)
+              </span>
+              <svg class="w-4 h-4 shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+              <div class="border border-t-0 border-zinc-800 rounded-b-lg p-8 bg-zinc-950 text-left shadow-lg">
+                <ul class="text-zinc-300 space-y-1 mb-6 text-sm">
+                  <li><strong>Banco:</strong> Provincial</li>
+                  <li><strong>Cédula:</strong> 19.531.198</li>
+                  <li><strong>Teléfono:</strong> 0412 147 9466</li>
+                  <li><strong>Referencia:</strong> Tu nombre o ID de sesión</li>
+                  <li><strong>Tasa de cambio:</strong> <span id="bcv-rate">Cargando Dolar Oficial...</span></li>
+                </ul>
+                <p class="text-zinc-400 text-xs mb-4">
+                  Envía el comprobante de pago por WhatsApp y te confirmo la sesión en cuanto vea el pago.
+                </p>
+                <a href="https://wa.me/584121479466" target="_blank" rel="noopener noreferrer" class="inline-block border border-zinc-700 text-zinc-300 font-semibold px-6 py-3 rounded-lg hover:bg-zinc-800 hover:border-zinc-600 transition-colors duration-300">
+                  Enviar comprobante WhatsApp
+                </a>
+              </div>
             </div>
           </div>
+      
+          <!-- Acordeón 2: Binance USDT -->
+          <div>
+            <button type="button" class="accordion-trigger flex justify-between items-center w-full p-5 font-semibold text-left text-white bg-zinc-900 border border-zinc-800 rounded-lg hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-zinc-700 transition-all duration-300">
+              <span class="flex items-center">
+                <img src="../assets/logos/binance.svg" alt="Logo de Binance" class="w-auto h-5 mr-3">
+                Binance USDT (TRC20)
+              </span>
+              <svg class="w-4 h-4 shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+              <div class="border border-t-0 border-zinc-800 rounded-b-lg p-8 bg-zinc-950 text-left shadow-lg">
+                <p class="text-zinc-300 mb-4 max-w-md break-words">
+                  Dirección de wallet TRC20:<br />
+                  <code class="bg-zinc-800 p-2 rounded text-sm block select-all">TP9Jpzk2rpbzggrh1YcHGsmUVEuNoRSxRg</code>
+                </p>
+                <ul class="text-zinc-300 space-y-1 mb-6 text-sm">
+                  <li><strong>Moneda:</strong> USDT</li>
+                  <li><strong>Red:</strong> TRC20 (Tron)</li>
+                  <li><strong>Correo para contacto:</strong> <a href="mailto:napbak@gmail.com" class="underline text-zinc-300 hover:text-white">napbak@gmail.com</a></li>
+                </ul>
+                <p class="text-zinc-400 text-xs mb-4">
+                  Después de hacer la transferencia, envía el comprobante por email o WhatsApp para confirmar.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                  <a href="mailto:napbak@gmail.com" class="flex-1 border border-zinc-700 text-zinc-300 font-semibold px-6 py-3 rounded-lg text-center hover:bg-zinc-800 hover:border-zinc-600 transition-colors duration-300">
+                    Enviar comprobante Email
+                  </a>
+                  <a href="https://wa.me/584121479466" target="_blank" rel="noopener noreferrer" class="flex-1 border border-zinc-700 text-zinc-300 font-semibold px-6 py-3 rounded-lg text-center hover:bg-zinc-800 hover:border-zinc-600 transition-colors duration-300">
+                    Enviar comprobante WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+      
         </div>
       </section>
 
@@ -424,6 +504,41 @@
           console.error('Error fetching exchange rate:', error);
           rateElement.textContent = `Error: ${error.message}`;
         });
+    });
+  </script>
+
+  <!-- Script para el acordeón -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const accordionTriggers = document.querySelectorAll('.accordion-trigger');
+
+      accordionTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          const content = trigger.nextElementSibling;
+          const icon = trigger.querySelector('svg');
+
+          // Cierra todos los demás acordeones para una mejor UX
+          document.querySelectorAll('.accordion-trigger').forEach(otherTrigger => {
+            if (otherTrigger !== trigger) {
+              const otherContent = otherTrigger.nextElementSibling;
+              const otherIcon = otherTrigger.querySelector('svg');
+              if (otherContent.style.maxHeight) {
+                otherContent.style.maxHeight = null;
+                otherIcon.classList.remove('rotate-180');
+              }
+            }
+          });
+
+          // Abre o cierra el actual
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+            icon.classList.remove('rotate-180');
+          } else {
+            content.style.maxHeight = content.scrollHeight + 'px';
+            icon.classList.add('rotate-180');
+          }
+        });
+      });
     });
   </script>
 
