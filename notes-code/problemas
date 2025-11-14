@@ -1,61 +1,45 @@
-        <p class="text-lg text-zinc-400 max-w-2xl mx-auto">
-          Sesiones 1-on-1 personalizadas. Elige tu sesión, reserva tu horario y comienza a mejorar tu producción.
-        </p>
-      </div>
+revisa por que cuando intento desplegar en netlify no se ven las fotos ni las imagenes ni videos en el home ?
 
-      <!-- ================================== -->
-      <!--      CÓMO FUNCIONA (NUEVA SECCIÓN)      -->
-      <!-- ================================== -->
-      <div class="max-w-5xl mx-auto text-left mb-20 px-4">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-10">
-          
-          <!-- Paso 1 -->
-          <div class="relative">
-            <div class="flex items-center mb-3">
-              <div class="flex items-center justify-center h-8 w-8 rounded-full bg-zinc-800 text-white font-bold text-sm mr-4 border border-zinc-700">1</div>
-              <h4 class="font-bold text-white">Elige tu sesión</h4>
-            </div>
-            <p class="text-zinc-400 text-sm">
-              Selecciona el servicio que necesitas de las opciones de abajo.
-            </p>
-          </div>
-          
-          <!-- Paso 2 -->
-          <div class="relative">
-            <div class="flex items-center mb-3">
-              <div class="flex items-center justify-center h-8 w-8 rounded-full bg-zinc-800 text-white font-bold text-sm mr-4 border border-zinc-700">2</div>
-              <h4 class="font-bold text-white">Realiza el pago</h4>
-            </div>
-            <p class="text-zinc-400 text-sm">
-              Usa PayPal para un pago seguro o elige un método alternativo.
-            </p>
-          </div>
-
-          <!-- Paso 3 -->
-          <div class="relative">
-            <div class="flex items-center mb-3">
-              <div class="flex items-center justify-center h-8 w-8 rounded-full bg-zinc-800 text-white font-bold text-sm mr-4 border border-zinc-700">3</div>
-              <h4 class="font-bold text-white">Agenda tu horario</h4>
-            </div>
-            <p class="text-zinc-400 text-sm">
-              Una vez confirmado el pago, recibirás un enlace a mi Calendly para que elijas tu día y hora.
-            </p>
-          </div>
-
-          <!-- Paso 4 -->
-          <div class="relative">
-            <div class="flex items-center mb-3">
-              <div class="flex items-center justify-center h-8 w-8 rounded-full bg-zinc-800 text-white font-bold text-sm mr-4 border border-zinc-700">4</div>
-              <h4 class="font-bold text-white">¡A producir!</h4>
-            </div>
-            <p class="text-zinc-400 text-sm">
-              Nos conectamos a la hora acordada y empezamos a trabajar en tu música.
-            </p>
-          </div>
-
-        </div>
-      </div>
-
-
-      <!-- SESSIONS GRID -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+Claro, entiendo el problema. Cuando los archivos multimedia (imágenes, videos) no se cargan en un sitio desplegado en Netlify, casi siempre se debe a un problema con las rutas de los archivos.
+Voy a investigar. Primero, examinaré el archivo public/index.html para ver cómo se están referenciando las imágenes y videos. Ya lo tengo de nuestra conversación anterior, así que lo revisaré ahora.
+Analizando public/index.html, veo lo siguiente:
+Video de Fondo:
+index.htmlLines 146-148
+          preload="metadata">          <source src="NAfPbYC.mp4" type="video/mp4">          Tu navegador no soporta el tag de video.
+La ruta es src="NAfPbYC.mp4".
+Imágenes en la sección "Conecta":
+index.htmlLine 368
+              <img src="L5wvBWM.png" alt="Fondo del Hub de napbak" loading="lazy" class="absolute inset-0 w-full h-full object-cover z-0 filter blur-sm brightness-50 opacity-60 transition-all duration-300 ease-in-out group-hover:blur-none group-hover:brightness-75 group-hover:opacity-100" onerror="this.style.display='none'">
+La ruta es src="L5wvBWM.png".
+index.htmlLine 386
+              <img src="IP0ODkC.png" alt="Fondo de la napbak App" loading="lazy" class="absolute inset-0 w-full h-full object-cover z-0 filter blur-sm brightness-50 opacity-60 transition-all duration-300 ease-in-out group-hover:blur-none group-hover:brightness-75 group-hover:opacity-100" onerror="this.style.display='none'">
+La ruta es src="IP0ODkC.png".
+El problema es que estos archivos no están en la raíz del directorio public, que es lo que Netlify despliega. Basado en la estructura de tu proyecto, los assets se copian desde src/assets a la raíz de public.
+Veamos el contenido del directorio public para confirmar.
+Okay, acabo de listar el contenido de tu directorio public y he encontrado el problema.
+Parece que tienes una copia de tus imágenes y videos tanto en la raíz de public (por ejemplo, public/NAfPbYC.mp4) como dentro de public/assets (por ejemplo, public/assets/NAfPbYC.mp4).
+Sin embargo, el script que copia los archivos, copy:assets, definido en tu package.json, está configurado así:
+package.json
+Apply to package.json
+"copy:assets": "cpy \"src/assets/**/*.{mp4,png,jpg,jpeg,gif}\" public/",
+Este comando copia los archivos de src/assets a la raíz de public.
+El problema es que en tu public/index.html, las rutas a las imágenes y videos son relativas, como NAfPbYC.mp4. Cuando Netlify despliega tu sitio, busca estos archivos en la raíz del sitio desplegado, que corresponde a tu directorio public.
+El hecho de que no se vean sugiere que Netlify podría estar teniendo problemas para encontrar esos archivos, o que la estructura de directorios en el despliegue no es la que esperas.
+La solución más limpia y robusta es la siguiente:
+Mover todos los assets (imágenes, videos) a una carpeta dedicada dentro de public, por ejemplo public/assets/.
+Actualizar todas las rutas en tus archivos HTML para que apunten a esa carpeta. Por ejemplo, cambiar src="NAfPbYC.mp4" a src="/assets/NAfPbYC.mp4".
+Voy a revisar tu package.json para ver si hay algún script que esté causando esta duplicación de archivos. Ya lo tengo de antes.
+El script copy:assets copia todo desde src/assets a public. Si tienes assets en public que no están en src/assets, no se verán afectados.
+Recomendación:
+Te sugiero que modifiquemos las rutas en public/index.html y public/en.html para que apunten al directorio assets. Esto hará que tu proyecto sea más organizado y solucionará el problema en Netlify.
+Aquí están los cambios que propongo para public/index.html:
+index.html
+Apply to index.html
+// ... existing code ...      preload="metadata">      <source src="assets/NAfPbYC.mp4" type="video/mp4">      Tu navegador no soporta el tag de video.    </video>// ... existing code ...        <!-- Tarjeta 1: El Hub -->        <div class="border border-zinc-800 rounded-lg relative overflow-hidden flex flex-col group">          <img src="assets/L5wvBWM.png" alt="Fondo del Hub de napbak" loading="lazy" class="absolute inset-0 w-full h-full object-cover z-0 filter blur-sm brightness-50 opacity-60 transition-all duration-300 ease-in-out group-hover:blur-none group-hover:brightness-75 group-hover:opacity-100" onerror="this.style.display='none'">                    <div class="relative z-10 p-8 flex flex-col items-center text-center h-full">            <h3 class="font-logo text-3xl font-bold text-zinc-100 mb-4">El Hub</h3>// ... existing code ...        <!-- Tarjeta 2: La App de Samples -->        <div class="border border-zinc-800 rounded-lg relative overflow-hidden flex flex-col group">          <img src="assets/IP0ODkC.png" alt="Fondo de la napbak App" loading="lazy" class="absolute inset-0 w-full h-full object-cover z-0 filter blur-sm brightness-50 opacity-60 transition-all duration-300 ease-in-out group-hover:blur-none group-hover:brightness-75 group-hover:opacity-100" onerror="this.style.display='none'">          <div class="relative z-10 p-8 flex flex-col items-center text-center h-full">            // ... existing code ...
+Y para public/en.html:
+en.html
+Apply to en.html
+// ... existing code ...      preload="metadata">      <source src="assets/NAfPbYC.mp4" type="video/mp4">      Your browser does not support the video tag.    </video>// ... existing code ...        <!-- Card 1: The Hub -->        <div class="border border-zinc-800 rounded-lg relative overflow-hidden flex flex-col group">          <img src="assets/L5wvBWM.png" alt="napbak Hub Background" loading="lazy" class="absolute inset-0 w-full h-full object-cover z-0 filter blur-sm brightness-50 opacity-60 transition-all duration-300 ease-in-out group-hover:blur-none group-hover:brightness-75 group-hover:opacity-100" onerror="this.style.display='none'">                    <div class="relative z-10 p-8 flex flex-col items-center text-center h-full">            <h3 class="font-logo text-3xl font-bold text-zinc-100 mb-4">The Hub</h3>// ... existing code ...        <!-- Card 2: The Sample App -->        <div class="border border-zinc-800 rounded-lg relative overflow-hidden flex flex-col group">          <img src="assets/IP0ODkC.png" alt="napbak App Background" loading="lazy" class="absolute inset-0 w-full h-full object-cover z-0 filter blur-sm brightness-50 opacity-60 transition-all duration-300 ease-in-out group-hover:blur-none group-hover:brightness-75 group-hover:opacity-100" onerror="this.style.display='none'">          <div class="relative z-10 p-8 flex flex-col items-center text-center h-full">            // ... existing code ...
+Básicamente, estoy añadiendo el prefijo assets/ a las rutas de las imágenes y el video.
+Además, para mantener tu proyecto limpio, te recomiendo que, una vez que apliques estos cambios, elimines las imágenes y videos que están en la raíz del directorio public y te quedes solo con los que están dentro de public/assets.
+¿Quieres que te muestre cómo hacer esto último también?
