@@ -11,13 +11,13 @@
   -->
   
   <!-- Optimized Title -->
-  <title>napbak | Music Sessions | 1-on-1 Production</title>
+  <title>napbak | 1-on-1 Music Production Sessions</title>
   
   <!-- Optimized Description -->
-  <meta name="description" content="Book 1-on-1 sessions with napbak. Improve your FL Studio production, arrangements, mixing, and get creative consulting.">
+  <meta name="description" content="Elevate your music with 1-on-1 production sessions by napbak. I offer FL Studio coaching, beat arrangement, professional mixing, and creative consulting for producers.">
   
   <!-- Keywords -->
-  <meta name="keywords" content="napbak, production sessions, fl studio, mixing, mastering, music arrangement, creative consulting, 1-on-1 music production">
+  <meta name="keywords" content="music producer, fl studio coaching, how to mix a beat, arrange a song, music feedback, napoleon baca, napbak music, online music sessions">
   
   <!-- Author -->
   <meta name="author" content="Napoleon Baca (napbak)">
@@ -69,6 +69,99 @@
   <link rel="manifest" href="../site.webmanifest">
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
 
+  <!-- 
+    ==================================================
+    STRUCTURED DATA (SCHEMA.ORG) FOR GOOGLE AND LLMs
+    ==================================================
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "napbak",
+    "alternateName": "Napoleon Baca",
+    "url": "https://www.napbak.com/sessions/en.html",
+    "image": "https://www.napbak.com/assets/napbak_foto.jpg",
+    "description": "Music producer with over 10 years of experience, specializing in FL Studio, offering 1-on-1 music production sessions to help artists and producers improve their sound.",
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "FL Studio Foundation",
+          "serviceType": "Music Production Session",
+          "description": "Optimize your FL Studio setup and master your workflow. Ideal for producers looking to improve efficiency and learn about essential plugins.",
+          "provider": {"@type": "MusicGroup", "name": "napbak"}
+        },
+        "price": "50",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Beat Arrangement Clinic",
+          "serviceType": "Music Arrangement Session",
+          "description": "Bring an unfinished beat. We'll complete it together: intro, build-up, drops, and outro. You'll learn professional structure in real-time.",
+          "provider": {"@type": "MusicGroup", "name": "napbak"}
+        },
+        "price": "45",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Express Mix",
+          "serviceType": "Mixing Session",
+          "description": "Bring your unmixed stems. I'll mix them live while you watch the process. Includes a preliminary master. Perfect for learning how professional beats sound.",
+          "provider": {"@type": "MusicGroup", "name": "napbak"}
+        },
+        "price": "60",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Creative Consulting",
+          "serviceType": "Music Consulting",
+          "description": "Creative direction and artistic feedback. Bring your project (idea, beat in progress, or mix). Get honest analysis and a strategy for improvement.",
+          "provider": {"@type": "MusicGroup", "name": "napbak"}
+        },
+        "price": "50",
+        "priceCurrency": "USD"
+      }
+    ],
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Rafael Chávez 'Tres Tres'"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "reviewBody": "For me, Napoleon is the best mix and master engineer in Aragua. I started as his student 5 years ago and today I am his colleague. Humility, wisdom, and trust: these three words define Napbak and his work."
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Edinkross"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "reviewBody": "Thanks to his ability to explain things during our consultation, I've felt that I've grown as an artist by achieving better production, and the most satisfying part is that, when I sit down at my computer, I now know what I'm doing and feel more confident working on my music."
+      }
+    ]
+  }
+  </script>
+
 </head>
 <body class="text-zinc-300 antialiased bg-brand-dark">
 
@@ -89,6 +182,8 @@
       </ul>
     </nav>
   </header>
+
+  <main>
 
   <!-- SESSIONS SECTION -->
   <section id="sessions" class="w-full py-20 px-6 bg-brand-dark border-t border-zinc-800">
@@ -162,7 +257,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
   
         <!-- SESSION 1: FL Studio Foundation -->
-        <div class="border border-zinc-800 rounded-lg p-8 hover:border-zinc-600 transition-colors duration-300 bg-zinc-950">
+        <article class="border border-zinc-800 rounded-lg p-8 hover:border-zinc-600 transition-colors duration-300 bg-zinc-950">
           <div class="mb-6">
             <h3 class="font-logo font-bold text-2xl text-white mb-2">
               FL Studio Foundation
@@ -204,10 +299,10 @@
               Book ($50)
             </button>
           </form>
-        </div>
+        </article>
       
         <!-- SESSION 2: Beat Arrangement Clinic -->
-        <div class="border border-zinc-800 rounded-lg p-8 hover:border-zinc-600 transition-colors duration-300 bg-zinc-950">
+        <article class="border border-zinc-800 rounded-lg p-8 hover:border-zinc-600 transition-colors duration-300 bg-zinc-950">
           <div class="mb-6">
             <h3 class="font-logo font-bold text-2xl text-white mb-2">
               Beat Arrangement Clinic
@@ -249,10 +344,10 @@
               Book ($45)
             </button>
           </form>
-        </div>
+        </article>
       
         <!-- SESSION 3: Express Mix -->
-        <div class="border border-zinc-800 rounded-lg p-8 hover:border-zinc-600 transition-colors duration-300 bg-zinc-950">
+        <article class="border border-zinc-800 rounded-lg p-8 hover:border-zinc-600 transition-colors duration-300 bg-zinc-950">
           <div class="mb-6">
             <h3 class="font-logo font-bold text-2xl text-white mb-2">
               Express Mix
@@ -294,10 +389,10 @@
               Book ($60)
             </button>
           </form>
-        </div>
+        </article>
       
         <!-- SESSION 4: Creative Consulting -->
-        <div class="border border-zinc-800 rounded-lg p-8 hover:border-zinc-600 transition-colors duration-300 bg-zinc-950">
+        <article class="border border-zinc-800 rounded-lg p-8 hover:border-zinc-600 transition-colors duration-300 bg-zinc-950">
           <div class="mb-6">
             <h3 class="font-logo font-bold text-2xl text-white mb-2">
               Creative Consulting
@@ -339,7 +434,7 @@
               Book ($50)
             </button>
           </form>
-        </div>
+        </article>
       
       </div>
 
@@ -438,8 +533,8 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       
       <!-- Review 2: Tres Tres - With Read More -->
-      <div class="border border-zinc-800 rounded-lg p-8 bg-zinc-950 hover:border-zinc-600 transition-colors duration-300 flex flex-col h-full">
-        <img src="../assets/FOTO_TRES_TRES.jpg" alt="Rafael Chávez - Tres Tres" class="w-24 h-24 rounded-lg bg-zinc-800 mb-4 object-cover" />
+      <article class="border border-zinc-800 rounded-lg p-8 bg-zinc-950 hover:border-zinc-600 transition-colors duration-300 flex flex-col h-full">
+        <img src="../assets/FOTO_TRES_TRES.jpg" alt="Profile picture of Rafael Chávez (Tres Tres), music producer." class="w-24 h-24 rounded-lg bg-zinc-800 mb-4 object-cover" />
         <div class="mb-4">
             <p class="text-white font-semibold text-sm">Rafael Chávez "Tres Tres"</p>
             <p class="text-zinc-500 text-xs">Producer / Buenos Aires, Argentina</p>
@@ -479,11 +574,11 @@
           Read more →
         </button>
         
-      </div>
+      </article>
 
       <!-- Review 1: Edinkross -->
-      <div class="border border-zinc-800 rounded-lg p-8 bg-zinc-950 hover:border-zinc-600 transition-colors duration-300 flex flex-col h-full">
-        <img src="../assets/FOTO_EDINKROSS.jpeg" alt="Edinkross" class="w-24 h-24 rounded-lg bg-zinc-800 mb-4 object-cover" />
+      <article class="border border-zinc-800 rounded-lg p-8 bg-zinc-950 hover:border-zinc-600 transition-colors duration-300 flex flex-col h-full">
+        <img src="../assets/FOTO_EDINKROSS.jpeg" alt="Profile picture of Edinkross, emerging artist." class="w-24 h-24 rounded-lg bg-zinc-800 mb-4 object-cover" />
         <div class="mb-4">
             <p class="text-white font-semibold text-sm">Edinkross</p>
             <p class="text-zinc-500 text-xs">Emerging Artist / Leiria, Portugal</p>
@@ -502,7 +597,7 @@
           Read more →
         </button>
         
-      </div>
+      </article>
 
     </div>
   </div>
@@ -689,6 +784,8 @@
 
     </div>
   </section>
+
+  </main>
 
   <!-- 
     ==================================================
